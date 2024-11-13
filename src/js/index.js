@@ -10,12 +10,16 @@ import Home from "./component/home.jsx";
 
 //render your react application
 
-let seconds = 0
+let seconds = 999980
 let numeration = [ "0", "0", "0", "0", "0", "0"]
 
   setInterval(() =>{
     
     seconds++
+    if(seconds == 999999){
+      seconds = 0 
+      numeration = [ "0", "0", "0", "0", "0", "0"]
+    }
     let secondsString = seconds.toString()
     
     for(let i = secondsString.length - 1; i >=0 ; i--){
